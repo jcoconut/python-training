@@ -39,16 +39,24 @@ def front_back(a, b):
     # +++your code here+++
 
     # di pa tapos :( 
-        
+
     al = len(a)
     bl = len(b)
     if al % 2 == 0:
-        print a[:al/2]
-        print a[al/2:]
+        front_a = a[:al/2]
+        back_a = a[al/2:]
     else:
-        print b[:bl/2]
-        print b[bl/2:]
-    return
+        front_a = a[:(al/2)+1]
+        back_a = a[(al/2)+1:]
+
+    if bl % 2 == 0:
+        front_b = b[:bl/2]
+        back_b = b[bl/2:]
+    else:
+        front_b = b[:(bl/2)+1]
+        back_b = b[(bl/2)+1:]
+
+    return front_a + front_b + back_a + back_b
 
 
 # Simple provided test() function used in main() to print
