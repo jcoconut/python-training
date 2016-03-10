@@ -32,10 +32,7 @@ def front_x(words):
     xmen = []
     avengers = []
     for each in words:
-        if(each[0]=='x'):
-            xmen.append(each)
-        else:
-            avengers.append(each)
+            xmen.append(each) if(each[0]=='x') else avengers.append(each)        
     return sorted(xmen) + sorted(avengers)
 
 
